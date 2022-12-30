@@ -8,9 +8,9 @@ import ChatIcon from "@mui/icons-material/Chat";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 import HeaderOption from "./HeaderOption";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { auth } from "./Firebase";
-import { logout, selectUser } from "./features/userSlice";
+import { logout } from "./features/userSlice";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -21,23 +21,42 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header_left">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-          alt="logo"
-        />
+        <a href="home">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+            alt="logo"
+          />
+        </a>
 
         <div className="header_search">
           <SearchIcon />
           <input placeholder="Search" type="text" />
         </div>
       </div>
+
       <div className="header_right">
-        <HeaderOption Icon={HomeIcon} title="Home" />
-        <HeaderOption Icon={SupervisorAccountIcon} title="My Network" />
-        <HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
-        <HeaderOption Icon={ChatIcon} title="Message" />
-        <HeaderOption Icon={NotificationsIcon} title="Notifications" />
-        <HeaderOption title="me" onClick={logoutOfApp} avatar={true} />
+        <HeaderOption Icon={HomeIcon} title="Home" link="#feeds" />
+        <HeaderOption
+          Icon={SupervisorAccountIcon}
+          title="My Network"
+          link="#sidebar"
+        />
+        <HeaderOption
+          Icon={BusinessCenterIcon}
+          title="Jobs"
+          link="https://www.jobberman.com/"
+        />
+        <HeaderOption
+          Icon={ChatIcon}
+          title="Message"
+          link="https://wa.me/qr/LWZJZHJ2AAOYE1"
+        />
+        <HeaderOption
+          Icon={NotificationsIcon}
+          title="Notifications"
+          link="#widgets"
+        />
+        <HeaderOption title="Logout" onClick={logoutOfApp} avatar={true} />
       </div>
     </div>
   );

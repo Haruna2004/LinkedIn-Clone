@@ -18,14 +18,14 @@ const Widgets = () => {
     </a>
   );
   return (
-    <div className="widgets">
+    <section className="widgets" id="widgets">
       <div className="widgets_header">
         <h2>LinkedIn News</h2>
         <InfoIcon />
       </div>
       {newsArticle("HARUNA lanches Linkedin 2.0", "Top news - 9999 readers")}
       {newsArticle("Coronavirus: Uk updates", "Top news - 886 readers")}
-      {newsArticle("Tesla hits new heights", "Car & auto - 300")}
+      {newsArticle("Tesla hits new heights", "Car & auto - 300 readers")}
       {newsArticle(
         "Bitcoin dips below $16.7K as US GDP meets fresh BTC price",
         "Crypto - 8000 reader"
@@ -39,7 +39,7 @@ const Widgets = () => {
         "Click on any article will open Faruk whatsapp dm",
         "Contact me - 6503 readers"
       )}
-    </div>
+    </section>
   );
 };
 

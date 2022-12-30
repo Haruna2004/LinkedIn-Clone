@@ -12,7 +12,7 @@ const Sidebar = () => {
     </div>
   );
   return (
-    <div className="sidebar">
+    <section className="sidebar" id="sidebar">
       <div className="sidebar_top">
         <img
           src="https://images.unsplash.com/photo-1579547621113-e4bb2a19bdd6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGFic3RyYWN0JTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
@@ -37,13 +37,15 @@ const Sidebar = () => {
       </div>
       <div className="sidebar_bottom">
         <p>Recent</p>
-        {recentItem("reactjs")}
-        {recentItem("programming")}
-        {recentItem("softwareEngineering")}
-        {recentItem("design")}
-        {recentItem("developer")}
+        <div className="sidebar_recentItems">
+          {recentItem("reactjs")}
+          {recentItem("programming")}
+          {recentItem("softwareEngineering")}
+          {recentItem("design")}
+          {recentItem("developer")}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -42,7 +42,7 @@ const Feed = () => {
       );
   }, []);
   return (
-    <div className="feed">
+    <section className="feed" id="feeds">
       <div className="feed_inputContainer">
         <div className="feed_input">
           <CreateIcon />
@@ -80,7 +80,7 @@ const Feed = () => {
           />
         ))}
       </FlipMove>
-    </div>
+    </section>
   );
 };
 export default Feed;
