@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 .app {
   background-color: #f3f2ef;
   display: flex;
@@ -20,5 +21,13 @@ html {
   .app_body {
     display: flex;
     flex-direction: column;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .app {
+    width: 100%;
+    margin: 0 auto;
   }
 }

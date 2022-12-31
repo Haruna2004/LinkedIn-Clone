@@ -39,11 +39,12 @@
 
 .header_right {
   display: flex;
+  align-items: center;
 }
 
 @media screen and (max-width: 760px) {
   .header_search > input {
-    width: 40px;
+    width: 0px;
   }
   .header_search {
     background-color: transparent;
@@ -55,5 +56,11 @@
   }
   .header_right {
     font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .header_left > a > img {
+    height: 40px;
   }
 }
