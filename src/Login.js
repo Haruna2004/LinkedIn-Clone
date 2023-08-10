@@ -77,14 +77,14 @@ const Login = () => {
         />
         <input
           value={email}
-          type="text"
-          placeholder="email"
+          type="email"
+          placeholder="justyourname@gmail"
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          type="password"
+          type="text"
           placeholder="Password"
         />
         <button type="submit" onClick={loginToApp}>
